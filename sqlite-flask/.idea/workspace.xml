@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb9c0fd8-6743-4556-ba3a-630824d044c7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ProjectId" id="1Z3yeabWy8sBEfTuvsNor8JWTnd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb9c0fd8-6743-4556-ba3a-630824d044c7" name="Default Changelist" comment="" />
+      <created>1584082167557</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584082167557</updated>
+      <workItem from="1584082171400" duration="29000" />
+      <workItem from="1584082233486" duration="4541000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="127" key="#SQL_Dialects" timestamp="1584082740053">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="127" key="#SQL_Dialects/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584082740053" />
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584082181903">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584082181903" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1584083215158">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584083215158" />
+    <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1584082832571">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="239" height="457" key="HiddenNamespacesPopup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584082832571" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1584083498732">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584083498732" />
+  </component>
+</project>
