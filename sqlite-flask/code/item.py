@@ -19,12 +19,6 @@ class Item(Resource):
         connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
 
-        query2 = "SELECT * FROM items"
-        result2 = cursor.execute(query2)
-        row2 = result2.fetchall()
-        for itm in row2:
-            print(itm)
-
         query = "SELECT * FROM items WHERE name=?"
         result = cursor.execute(query, (name,))
         row = result.fetchone()
@@ -40,14 +34,11 @@ class Item(Resource):
 
         data = Item.parser.parse_args()
         item = {'name': name, 'price': data['price']}
-        connection = sqlite3.connect('data.db')
-        cursor = connection.cursor()
+        try:
+            self.insert_data(item)
+        except:
+            return {'message': 'An error occurred while inserting data..'}, 500  # Internal Server Error
 
-        query = "INSERT INTO items VALUES (?, ?)"
-        cursor.execute(query, (item['name'], item['price']))
-
-        connection.commit()
-        connection.close()
         return item, 201
 
     @jwt_required()
@@ -64,18 +55,58 @@ class Item(Resource):
 
     @jwt_required()
     def put(self, name):
-
         data = Item.parser.parse_args()
 
-        item = next(filter(lambda x: x['name'] == name, items), None)
+        item = self.find_by_name(name)
+        updated_item = {'name': name, 'price': data['price']}
+
         if item is None:
-            item = {'name': name, 'price': data['price']}
-            items.append(item)
+            try:
+                self.insert_data(updated_item)
+            except:
+                return {'message': 'An error occurred while inserting data..'}, 500  # Internal Server Error
+
         else:
-            item.update(data)
-        return item
+            try:
+                self.update_data(updated_item)
+            except:
+                return {'message': 'An error occurred while inserting data..'}, 500  # Internal Server Error
+
+        return updated_item
+
+    @classmethod
+    def update_data(cls, item):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "UPDATE items set price=? WHERE name=?"
+        cursor.execute(query, (item['price'], item['name']))
+
+        connection.commit()
+        connection.close()
+
+    @classmethod
+    def insert_data(cls, item):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "INSERT INTO items VALUES (?, ?)"
+        cursor.execute(query, (item['name'], item['price']))
+
+        connection.commit()
+        connection.close()
 
 
 class ItemList(Resource):
     def get(self):
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "SELECT * FROM items"
+        result = cursor.execute(query)
+        items = []
+        rows = result.fetchall()
+        for row in rows:
+            items.append({'name': row[0], 'price':row[1]})
+        connection.close()
         return {'items': items}
