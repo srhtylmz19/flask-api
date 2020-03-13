@@ -33,6 +33,7 @@ class Item(Resource):
         if row:
             return {'item': {'name': row[0], 'price': row[1]}}
 
+    @jwt_required()
     def post(self, name):
         if self.find_by_name(name):
             return {'message': "Item with name '{}' already exist".format(name)}
@@ -51,8 +52,14 @@ class Item(Resource):
 
     @jwt_required()
     def delete(self, name):
-        global items  # outer items variable
-        items = list(filter(lambda x: x['name'] != name, items))
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        query = "DELETE FROM items WHERE name=?"
+        cursor.execute(query, (name,))
+
+        connection.commit()
+        connection.close()
         return {'message': 'Item Deleted'}
 
     @jwt_required()
